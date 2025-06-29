@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Snehal - Vegetarian Indian Cuisine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f4e9;
+        }
+        
+        .menu-item:hover .item-image {
+            transform: scale(1.05);
+        }
+        
+        .item-image {
+            transition: transform 0.3s ease;
+        }
+        
+        .veg-icon {
+            color: green;
+        }
+        
+        .non-veg-icon {
+            color: red;
+        }
+        
+        .section-title {
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #d97706;
+        }
+        
+        .price-tag {
+            background-color: #d97706;
+            color: white;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-amber-900 text-white py-6 shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl font-bold">HOTEL SNEHAL</h1>
+                    <p class="text-amber-200 mt-1">Authentic Indian Vegetarian Cuisine Since 1985</p>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="text-center">
+                        <i class="fas fa-phone-alt text-amber-300"></i>
+                        <p class="text-sm">+91 9876543210</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-map-marker-alt text-amber-300"></i>
+                        <p class="text-sm">Nandanwan, Nagpur</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-64 md:h-96 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="text-center px-4">
+                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Vegetarian Indian Delights</h2>
+                <p class="text-xl text-amber-200">Experience the rich flavors of India</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="py-12 px-4 container mx-auto">
+        <!-- Starters -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 section-title">Starters & Appetizers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Paneer Tikka" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Paneer Tikka</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Cubes of paneer marinated in spices and grilled to perfection</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹220</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633945274309-2c16f9686f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Hara Bhara Kabab" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Hara Bhara Kabab</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Spinach and green peas patties with mild spices</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹180</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Aloo Tikki" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Aloo Tikki</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Spiced potato patties served with chutneys</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹150</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Course -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 section-title">Main Course</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633945274309-2c16f9686f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Paneer Butter Masala" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Paneer Butter Masala</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Paneer cubes in rich tomato and cashew gravy</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹280</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Dal Makhani" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Dal Makhani</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Black lentils slow cooked with butter and cream</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹220</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1601050690117-5b927f00bf4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80" alt="Malai Kofta" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Malai Kofta</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Vegetable and paneer dumplings in creamy gravy</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹260</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Breads -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 section-title">Indian Breads</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Butter Naan" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Butter Naan</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Leavened white flour bread with butter</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹60</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633945274309-2c16f9686f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Lachha Paratha" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Lachha Paratha</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Multi-layered whole wheat bread</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹70</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Missi Roti" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Missi Roti</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Spiced gram flour and wheat bread</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹50</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Rice & Biryani -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 section-title">Rice & Biryani</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1630911428997-c35f4a7a6c1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Vegetable Biryani" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Vegetable Biryani</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Fragrant basmati rice cooked with vegetables and spices</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹240</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Jeera Rice" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Jeera Rice</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Basmati rice tempered with cumin seeds</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹150</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1633945274309-2c16f9686f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Paneer Pulao" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Paneer Pulao</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Fragrant rice cooked with paneer and mild spices</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹220</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Desserts -->
+        <div class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 section-title">Desserts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=627&q=80" alt="Gulab Jamun" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Gulab Jamun</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Soft milk dumplings soaked in sugar syrup</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹120</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586201375761-83865001e331?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Rasmalai" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Rasmalai</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Soft cheese patties in sweetened, thickened milk</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹140</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden menu-item">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Kheer" class="w-full h-full object-cover item-image">
+                    </div>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold">Kheer</h3>
+                            <span class="veg-icon"><i class="fas fa-circle"></i></span>
+                        </div>
+                        <p class="text-gray-600 mt-2">Traditional rice pudding with nuts and cardamom</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <span class="price-tag px-3 py-1 text-sm font-medium">₹100</span>
+                            <button class="bg-amber-600 text-white px-3 py-1 rounded hover:bg-amber-700 transition">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">Hotel Snehal</h3>
+                    <p class="text-amber-200">Serving authentic flavors since 1985</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-amber-200 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-amber-200 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-amber-200 hover:text-white"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-amber-700 mt-6 pt-6 text-center text-sm">
+                <p>© 2023 Hotel Snehal. All Rights Reserved.</p>
+                <p class="mt-2">Nandanwan, Nagpur | +91 9876543210 | info@hotelsnehal.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Cart Button -->
+    <div class="fixed bottom-6 right-6">
+        <button class="bg-amber-600 text-white rounded-full p-4 shadow-lg hover:bg-amber-700 transition">
+            <i class="fas fa-shopping-cart text-xl"></i>
+            <span class="absolute -top-1 -right-1 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">3</span>
+        </button>
+    </div>
+
+    <script>
+        // Simple cart functionality
+        document.querySelectorAll('button').forEach(button => {
+            if (button.textContent.includes('Add to Cart')) {
+                button.addEventListener('click', function() {
+                    const itemName = this.parentElement.parentElement.querySelector('h3').textContent;
+                    const itemPrice = this.parentElement.querySelector('.price-tag').textContent;
+                    
+                    alert(`Added ${itemName} (${itemPrice}) to your cart!`);
+                    
+                    // In a real app, you would update the cart count here
+                });
+            }
+        });
+    </script>
+
+</html>
